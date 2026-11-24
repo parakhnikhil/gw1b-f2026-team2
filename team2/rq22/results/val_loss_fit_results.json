@@ -1,0 +1,110 @@
+{
+  "target_parameters": 1150000000,
+  "target_training_tokens": 20000000000,
+  "num_runs": 12,
+  "parameter_unit": "million",
+  "token_unit": "billion",
+  "huber_f_scale": 0.01,
+  "methods": {
+    "linear": {
+      "parameters": {
+        "E": 1.7171006541442502,
+        "A": 2.342587107397262,
+        "alpha": 0.3101022765370139,
+        "B": 0.746100159541183,
+        "beta": 0.21818037867558931
+      },
+      "predicted_val_loss": 2.368565583002331,
+      "training_rmse": 0.012031799831476097,
+      "holdout_350M": [
+        {
+          "tokens_per_parameter": 10,
+          "actual_loss": 2.6678333282470703,
+          "predicted_loss": 2.632755324211307,
+          "absolute_percentage_error": 1.314849907014679
+        },
+        {
+          "tokens_per_parameter": 20,
+          "actual_loss": 2.593308448791504,
+          "predicted_loss": 2.5440883038816233,
+          "absolute_percentage_error": 1.8979672446144014
+        },
+        {
+          "tokens_per_parameter": 30,
+          "actual_loss": 2.5532948970794678,
+          "predicted_loss": 2.4960064117250136,
+          "absolute_percentage_error": 2.243708136493846
+        }
+      ],
+      "leave_one_size_out": {
+        "50M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.455826086638563
+        },
+        "100M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.4368472928489906
+        },
+        "200M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.3429848673472073
+        },
+        "350M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.2462043089868926
+        }
+      },
+      "holdout_mean_percentage_error": 1.8188417627076419
+    },
+    "huber": {
+      "parameters": {
+        "E": 1.6027486903556374,
+        "A": 2.1773022026514974,
+        "alpha": 0.22365526429516572,
+        "B": 0.6474845029711167,
+        "beta": 0.24797728106123113
+      },
+      "predicted_val_loss": 2.360957138363677,
+      "training_rmse": 0.012977193440856113,
+      "holdout_350M": [
+        {
+          "tokens_per_parameter": 10,
+          "actual_loss": 2.6678333282470703,
+          "predicted_loss": 2.632886980378962,
+          "absolute_percentage_error": 1.3099149597576294
+        },
+        {
+          "tokens_per_parameter": 20,
+          "actual_loss": 2.593308448791504,
+          "predicted_loss": 2.5433006303362036,
+          "absolute_percentage_error": 1.9283405519541748
+        },
+        {
+          "tokens_per_parameter": 30,
+          "actual_loss": 2.5532948970794678,
+          "predicted_loss": 2.4946980385765287,
+          "absolute_percentage_error": 2.294950676083825
+        }
+      ],
+      "leave_one_size_out": {
+        "50M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.4558260901098086
+        },
+        "100M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.436847293833463
+        },
+        "200M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.342984866308393
+        },
+        "350M": {
+          "num_runs": 9,
+          "predicted_val_loss": 2.2454806181801406
+        }
+      },
+      "holdout_mean_percentage_error": 1.8444020625985431
+    }
+  }
+}
