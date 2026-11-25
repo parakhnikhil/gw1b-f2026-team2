@@ -1,0 +1,26 @@
+{
+  "run": "team2-rq2.2-200m-t10",
+  "batch_size": 16,
+  "limit": null,
+  "n_examples": {
+    "hellaswag": 10042,
+    "arc_easy": 2376,
+    "piqa": 1838
+  },
+  "scores": {
+    "hellaswag": {
+      "acc": 0.297450707030472,
+      "acc_norm": 0.3298147779326827
+    },
+    "arc_easy": {
+      "acc": 0.5437710437710438,
+      "acc_norm": 0.48863636363636365
+    },
+    "piqa": {
+      "acc": 0.6338411316648531,
+      "acc_norm": 0.6338411316648531
+    }
+  },
+  "device_kind": "cpu",
+  "step": 3814
+}
